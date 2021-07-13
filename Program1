@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+class Function{
+	
+public double calculation(double a,double b,String opr) {
+		
+		double result=0,num1=a,num2=b;
+		String operator=opr;
+		switch(operator) {
+		case "+":result= num1+num2;break;
+		case "-":result= num1-num2;break;
+		case "*":result= num1*num2;break;
+		case "/":result=  num1/num2;break;
+		
+		}
+		
+		return result;
+	}
+
+}
+
+public class Program1 {
+	
+
+
+	public static void main(String[] args) {
+		double num1,num2,result;
+		String operator;
+		Scanner obj=new Scanner(System.in);
+		
+		System.out.println("Enter two Numbers:");
+		num1=obj.nextDouble();
+		num2=obj.nextDouble();
+		System.out.println("Enter the operator:");
+		operator=obj.next();
+		Function f_obj=new Function();
+		result=f_obj.calculation(num1,num2,operator);
+		System.out.println("The result is  "+result);
+	}
+	
+	
+}
