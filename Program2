@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Program2 {
+
+	public static void main(String[] args) {
+	  int count,num,i,limit,j;	
+      Scanner obj=new Scanner(System.in);
+		
+		System.out.println("Enter the limit(enter 0 to exit) :");
+		do {
+		 count=obj.nextInt();
+		 limit=count;
+		 for(j=1 ; j <= limit ; j++) {
+			 System.out.print( "Input a=  "+j+"  output :");
+			 for( i=0 ,num=1; i<j; i++) {
+				 System.out.print( num+" ");
+				 num+=2;
+    	
+			 }
+			 System.out.println(); 
+             count--;
+		 }
+		}while(count != 0);
+		if(count < 0)
+			System.out.println("...Enter a valid input ...");
+	}
+
+}
