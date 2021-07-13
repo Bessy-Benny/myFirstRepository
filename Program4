@@ -1,0 +1,72 @@
+import java.util.Scanner;
+
+public class Program4 {
+
+	public static void main(String[] args) {
+		Scanner obj=new Scanner(System.in);
+		int i,j,k,c_2=0,c_3=0,c_4=0,c_5=0,c_6=0,c_7=0,c_8=0,c_9=0,number;
+		int[] array= {1,2,8,9,12,46,76,82,15,20,30} ;	
+		int count=array.length;
+		
+		//print the array
+				for(i=0;i<count ;i++) {
+					System.out.print( array[i]+" ");
+				}
+		k=count;
+		for(j=0;j<k;j++) {
+			number=array[j];
+			if(number % 9==0) {
+				c_9++;
+				c_3++;
+			}
+			else if(number % 8==0) {
+				c_8++;c_2++;
+				if(number % 4==0) {
+					c_4++;
+					
+				}
+			}
+			else if(number%7==0) {
+				c_7++;
+			}
+			else if(number %3==0 && number %2==0) {
+				c_6++;
+				c_3++;
+				c_2++;
+				if(number%4==0)
+					c_4++;
+				if(number%5==0)
+					c_5++;
+			}
+			else if(number%5==0) {
+				c_5++;
+				if(number%3==0) 
+					c_3++;
+				if(number%2==0) 
+					c_2++;
+				if(number%4==0) 
+					c_4++;
+				
+			}
+			else if(number%4==0 ) {
+				c_4++;
+				c_2++;
+				if(number%3==0)
+					c_3++;
+			}
+			else if(number%3==0) {
+				c_3++;
+			}
+			else if(number%2==0) {
+				c_2++;
+			}
+			
+			
+		}
+		
+		System.out.println( "\noutput   {  1:"+count+"  2:"+c_2+"  3:"+c_3+"  4:"+c_4+"  5:"+c_5+"  6:"+c_6+"  7:"+c_7+"  8:"+c_8+"  9:"+c_9+"  }");
+		
+		
+	}
+
+}
